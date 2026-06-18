@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>追逐打字 — Chase-Type</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="hud-top">
+      <div id="distance-meter">
+        <div id="distance-label">距离</div>
+        <div id="distance-bar-track">
+          <div id="distance-bar-fill"></div>
+        </div>
+      </div>
+      <div id="hp-bars">
+        <div class="hp-row">
+          <span class="hp-label">追逐 HP</span>
+          <div class="hp-track"><div id="chase-hp-fill" class="hp-fill chase-hp"></div></div>
+        </div>
+        <div class="hp-row">
+          <span class="hp-label">对决 HP</span>
+          <div class="hp-track"><div id="duel-hp-fill" class="hp-fill duel-hp"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="canvas-wrapper">
+      <canvas id="game-canvas"></canvas>
+    </div>
+
+    <div id="hud-bottom">
+      <div id="current-word"></div>
+      <input type="text" id="typing-input" placeholder="输入拼音..." autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <div id="npc-info">目标: <span id="npc-name">-</span></div>
+    </div>
+  </div>
+
+  <script type="module" src="src/game.js"></script>
+</body>
+</html>
